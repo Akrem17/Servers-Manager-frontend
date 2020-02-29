@@ -1,0 +1,73 @@
+<div class="mydiv">
+<div class="border">
+
+
+  <div class="container">
+
+  <div class="row" >
+    <div class="col-md-4">
+      <h1>Add Server</h1>
+    <form  (ngSubmit)="addServer()">
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Name</label>
+        <input   [(ngModel)]="Server.name" name="name" type="text" class="form-control" id="exampleFormControlInput1" required placeholder="Put a name here">
+      </div>  
+
+
+     </form>  
+
+</div>
+
+</div>
+
+
+
+
+  <div class="server">
+    
+    <ul class="list-group">
+      <li class="list-group-item">
+        <h4>Id: {{Server.id}}</h4>
+        <h4>Name: {{Server.name}}</h4>
+        <h4 style="display: inline;" >Status: {{Server.active==true ?'Active' : 'Not Active'}} </h4>         
+        <button type="button" (click)="changeStatus()" class="btn btn-primary">Change Status</button>
+      </li>
+      <div class="btn-group" role="group" aria-label="Basic example">
+      </div> 
+      
+
+    </ul>
+    <button type="submit" class="btn btn-primary w-100" (click)="addServer()" >Add Server</button>
+
+  </div>
+
+</div>
+<div class="container mt-md-5" *ngIf="Servers[0]">
+
+<h1>List of Servers</h1>
+ 
+<ul class="list-group">
+  <li class="list-group-item" *ngFor='let server of Servers'> 
+    <h4>Id:  {{server.id}} </h4>
+    <h4>Name: {{server.name}} </h4>
+    <h4  
+      class="inline">Status: 
+      
+       <span  [ngClass]="{
+        'activeServer':server.active == true,
+        'notActive':server.active == false}">{{server.active==true ?'Active' : 'Not Active'}} </span>  </h4>
+    <button type="button" (click)="changeSpecStatus(server)" class="btn btn-primary"> Change Status</button>
+
+  
+  </li>
+
+</ul>
+
+</div>
+
+
+</div>
+</div>
+
+
