@@ -1,3 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Servers manager</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 50px;">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" >
+          <a  class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item" style="margin-left: 20px;">
+          <a class="nav-link active" aria-current="page" href="#">Servers</a>
+        </li>
+        
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Server Name" aria-label="Search">
+        <button style="color: white;" class="btn btn-outline-success bg-secondary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 <div class="mydiv">
 <div class="border">
 
@@ -6,11 +30,12 @@
 
   <div class="row" >
     <div class="col-md-4">
-      <h1>Add Server</h1>
+      <br>
+      <h1>Add new server</h1>
     <form  (ngSubmit)="addServer()">
 
       <div class="form-group">
-        <label for="exampleFormControlInput1">Name</label>
+        <label for="exampleFormControlInput1" style="font-family: 'PT Sans', sans-serif;">Server name </label>
         <input   [(ngModel)]="Server.name" name="name" type="text" class="form-control" id="exampleFormControlInput1" required placeholder="Put a name here">
       </div>  
 
@@ -56,7 +81,7 @@
       
        <span  [ngClass]="{
         'activeServer':server.active == true,
-        'notActive':server.active == false}">{{server.active==true ?'Active' : 'Not Active'}} </span>  </h4>
+        'notActive':server.active == false}">{{server.active==true ?'ON' : 'OFF'}} </span>  </h4>
     <button type="button" (click)="changeSpecStatus(server)" class="btn btn-primary"> Change Status</button>
 
   
@@ -71,3 +96,52 @@
 </div>
 
 
+
+<footer>
+  <div class="jumbotron jumbotron-fluid bg-primary p-4 mt-5 mb-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
+          <div class="card bg-primary border-0">
+            <div class="card-body text-light text-center">
+              <h5 class="card-title text-white display-4" style="font-size:30px">Servers manager</h5>
+            <p class="d-inline lead">Servers manager © 2019<br>
+            <a href="#" class="text-light d-block lead">Application</a>
+            </p>
+
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
+          <div class="card bg-primary border-0">
+            <div class="card-body text-center">
+              <h5 class="card-title text-white display-4" style="font-size:30px">Contact</h5>
+              <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i class="fa fa-phone mr-2"></i>+216 28 274 222</a>
+              <a class="text-light d-block lead" href="#"><i class="fa fa-envelope mr-2"></i>akremhammami@outlook.com</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+          <div class="card bg-primary border-0">
+            <div class="card-body text-center">
+            <h5 class="card-title text-white display-4" style="font-size:30px">Made by</h5>
+            <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i class="fa fa-phone mr-2"></i>Akrem Hammami</a>
+
+                <a class="text-light" href="#"><i class="fa fa-facebook-square fa-fw fa-2x"></i></a>
+              
+                <a class="text-light" href="#"><i class="fa fa-twitter-square fa-fw fa-2x"></i></a>
+              
+                <a class="text-light" href="#"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+              
+                <a class="text-light" href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+              
+            </div>
+          </div>
+        </div>	
+      </div>
+    </div>
+  </div>
+</footer>
+<!--# Footer #-->

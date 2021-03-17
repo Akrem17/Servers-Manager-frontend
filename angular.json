@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "exple": {
@@ -27,7 +27,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [  
+            "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "exple"
+    }
+  },
+  "defaultProject": "exple",
+  "cli": {
+    "analytics": "47b9f945-4633-4e0b-858d-a7ba88a88fe9"
+  }
 }
